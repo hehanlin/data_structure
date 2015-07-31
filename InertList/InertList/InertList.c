@@ -43,8 +43,8 @@ int main()
 	}
 	//插入
 	elementtype x=9;
-	//printf_s("\nplease input\n");
-	//scanf_s(&x);//直接使用定义好的值正确，但是scanf输入错误
+	printf_s("\nplease input\n");
+	scanf_s("%d",&x);//直接使用定义好的值正确，但是scanf输入错误
 	insert(&list, x, 1);
 
 	//插入后打印
