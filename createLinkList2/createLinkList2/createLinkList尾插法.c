@@ -24,7 +24,7 @@ void createLinkList(Node *phead, int n)
 	ptail = phead;
 	int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 1; i < n; i++)
 	{
 		pnew = (Node*)malloc(sizeof(Node));
 		pnew->data = rand() % 9 + 1;
