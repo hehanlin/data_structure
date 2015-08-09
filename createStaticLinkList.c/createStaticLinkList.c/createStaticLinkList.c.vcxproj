@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{93A0DDEF-BA6F-4723-9D7F-38AD7706600E}</ProjectGuid>
+    <ProjectGuid>{E90143EE-B322-4D94-9CC9-1960C0F56C0A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>deleteLInkListAll</RootNamespace>
+    <RootNamespace>createStaticLinkListc</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,7 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="deleteLinkListAll.c" />
+    <ClCompile Include="createStaticLinkList.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

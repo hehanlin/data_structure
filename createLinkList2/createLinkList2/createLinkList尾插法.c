@@ -11,7 +11,7 @@ typedef struct Node
 }Node;
 
 
-//头插法建立整张链表，传入头节点首地址，节点个数
+//尾插法建立整张链表，传入头节点首地址，节点个数
 void createLinkList(Node *phead, int n)
 {
 	if (n <= 0)

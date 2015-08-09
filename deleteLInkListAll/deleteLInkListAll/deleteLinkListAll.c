@@ -34,26 +34,22 @@ void createLinkList(Node *phead, int n)
 	ptail->next = NULL;
 }
 
-//链表插入操作，接收一个头指针，要插入的位置，插入的数值
-void insert(Node *phead, int n, elementtype x)
+//删除整张链表，传入头节点
+int deleteLinkListAll(Node *phead)
 {
-	if (n <= 0)return;
-	int i = 1;
+	if (!phead)return(0);
+
 	Node *p = phead;
-	while (p && i < n-1)
+	Node *q = NULL;
+	while (p)
 	{
-		p = p->next;
-		i++;
+		q = p->next;
+		free(p);
+		p = q;
 	}
-	
-	if (!p || i>n)return;
 
-	Node *pnew = NULL;
-	pnew = (Node *)malloc(sizeof(Node));
-	pnew->data = x;
-	pnew->next = p->next;
-	p->next = pnew;
-
+	phead->next = NULL;
+	return(1);
 }
 
 int main()
@@ -69,25 +65,13 @@ int main()
 
 	//遍历整个链表
 	Node *q = phead;
-	int i;
-	for (i = 0; i < n; i++)
+	for (size_t i = 0; i < n; i++)
 	{
 		printf_s("%3d", q->data);
 		q = q->next;
 	}
 
-	printf_s("\nplease input insert position and value:");
-	int j;
-	elementtype y;
-	scanf_s("%d", &j);
-	scanf_s("%d", &y);
-	printf_s("\n");
-	insert(phead, j, y);
-	n++;
-	for (i = 0; i < n; i++)
-	{
-		printf_s("%3d", phead->data);
-		phead = phead->next;
-	}
+	//删除整个链表
+	deleteLinkListAll(phead);
 	return(0);
 }
