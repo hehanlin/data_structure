@@ -11,12 +11,17 @@ typedef struct Node
 }Node;
 
 Node *createNewNode();
+
+
+//用一个全局变量来接收头节点
+Node *phead = NULL;
 Node *createLinkList(int n)
 {
 
 	if (n == 0)
 	{
 		Node *sunPoint = createNewNode();
+		phead = sunPoint;
 		return sunPoint;
 	}
 	else
@@ -26,27 +31,7 @@ Node *createLinkList(int n)
 		thePoint->next = createNewNode();
 		return thePoint->next;
 	}
-	/*
-	int m = n;
-	if (m == n)
-	{
-		Node *sunPoint;
-		sunPoint = createNewNode();
-		sunPoint->data = 5;
-		sunPoint->next = createNewNode();
-		return sunPoint->next;
-	}
-	else
-	{
-		m++;
-		Node *thePoint = createLinkList(m);
-		thePoint->data = 5;
-		thePoint->next = createLinkList(m-1);
-
-	}
-	*/
 	
-
 }
 
 Node *createNewNode()
@@ -61,5 +46,6 @@ int main()
 	printf_s("please input number of LinkList node:");
 	int n;
 	scanf_s("%d", &n);
-	Node *headPoint = createLinkList(n);
+	int i = 0;
+	createLinkList(n);
 }

@@ -16,7 +16,7 @@ void initStaicLinkList()
 	int i;
 	for (i = 0; i < MAXLEN - 1; i++)
 		staticLinkList[i].cur = i + 1;
-	staticLinkList[MAXLEN-1].cur = 0;
+	staticLinkList[MAXLEN-1].cur = 1;
 }
 
 int malloc_arr()
@@ -34,7 +34,7 @@ int malloc_arr()
 int create(int n)
 {
 	if (n >= MAXLEN-1)return(0);
-	if (staticLinkList[0].cur != 1 || staticLinkList[MAXLEN - 1].cur != 1)return(0);
+	//if (staticLinkList[0].cur != 1 || staticLinkList[MAXLEN - 1].cur != 1)return(0);
 
 	int i;
 	for (i = 0; i < n; i++)
